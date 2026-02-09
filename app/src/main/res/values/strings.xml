@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TV8</string>
+    <string name="tv_frame">TV Frame</string>
+    <string name="power">Power</string>
+    <string name="channel_static">Static</string>
+    <string name="channel_fire">Fire</string>
+    <string name="channel_rain">Rain</string>
+    <string name="channel_ocean">Ocean</string>
+    <string name="channel_forest">Forest</string>
+</resources>
