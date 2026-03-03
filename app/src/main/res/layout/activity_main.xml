@@ -2,94 +2,106 @@
 <androidx.constraintlayout.widget.ConstraintLayout 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="#4b4b4b"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/tv_frame"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:scaleType="fitCenter"
-        android:contentDescription="@string/tv_frame"
         android:src="@drawable/tv_frame"
-        app:layout_constraintDimensionRatio="4:3"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/tv_frame"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.9" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <VideoView
-        android:id="@+id/video_view"
+    <FrameLayout
+        android:id="@+id/screen_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="invisible"
+        android:background="@android:color/transparent"
         app:layout_constraintTop_toTopOf="@id/tv_frame"
         app:layout_constraintBottom_toBottomOf="@id/tv_frame"
         app:layout_constraintStart_toStartOf="@id/tv_frame"
         app:layout_constraintEnd_toEndOf="@id/tv_frame"
-        app:layout_constraintWidth_percent="0.78"
-        app:layout_constraintHeight_percent="0.82" />
+        app:layout_constraintWidth_percent="0.71"
+        app:layout_constraintHeight_percent="0.33"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintVertical_bias="0.51">
 
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <!-- Кнопки -->
     <Button
         android:id="@+id/power_btn"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
-        app:layout_constraintEnd_toEndOf="@id/tv_frame"
-        app:layout_constraintStart_toStartOf="@id/tv_frame"
         app:layout_constraintTop_toTopOf="@id/tv_frame"
-        app:layout_constraintVertical_bias="0.88"
-        app:layout_constraintHorizontal_bias="0.24" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
+        app:layout_constraintStart_toStartOf="@id/tv_frame"
+        app:layout_constraintEnd_toEndOf="@id/tv_frame"
+        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintHorizontal_bias="0.17" />
 
     <Button
         android:id="@+id/channel1_btn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
-        app:layout_constraintEnd_toEndOf="@id/tv_frame"
-        app:layout_constraintStart_toStartOf="@id/tv_frame"
         app:layout_constraintTop_toTopOf="@id/tv_frame"
-        app:layout_constraintVertical_bias="0.33"
-        app:layout_constraintHorizontal_bias="0.78" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
+        app:layout_constraintStart_toStartOf="@id/tv_frame"
+        app:layout_constraintEnd_toEndOf="@id/tv_frame"
+        app:layout_constraintVertical_bias="0.43"
+        app:layout_constraintHorizontal_bias="0.88" />
 
     <Button
         android:id="@+id/channel2_btn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
-        app:layout_constraintEnd_toEndOf="@id/tv_frame"
-        app:layout_constraintStart_toStartOf="@id/tv_frame"
         app:layout_constraintTop_toTopOf="@id/tv_frame"
-        app:layout_constraintVertical_bias="0.43"
-        app:layout_constraintHorizontal_bias="0.78" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
+        app:layout_constraintStart_toStartOf="@id/tv_frame"
+        app:layout_constraintEnd_toEndOf="@id/tv_frame"
+        app:layout_constraintVertical_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.88" />
 
     <Button
         android:id="@+id/channel3_btn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
-        app:layout_constraintEnd_toEndOf="@id/tv_frame"
-        app:layout_constraintStart_toStartOf="@id/tv_frame"
         app:layout_constraintTop_toTopOf="@id/tv_frame"
+        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
+        app:layout_constraintStart_toStartOf="@id/tv_frame"
+        app:layout_constraintEnd_toEndOf="@id/tv_frame"
         app:layout_constraintVertical_bias="0.53"
-        app:layout_constraintHorizontal_bias="0.78" />
+        app:layout_constraintHorizontal_bias="0.88" />
 
     <Button
         android:id="@+id/channel4_btn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
-        app:layout_constraintEnd_toEndOf="@id/tv_frame"
-        app:layout_constraintStart_toStartOf="@id/tv_frame"
         app:layout_constraintTop_toTopOf="@id/tv_frame"
-        app:layout_constraintVertical_bias="0.63"
-        app:layout_constraintHorizontal_bias="0.78" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_frame"
+        app:layout_constraintStart_toStartOf="@id/tv_frame"
+        app:layout_constraintEnd_toEndOf="@id/tv_frame"
+        app:layout_constraintVertical_bias="0.58"
+        app:layout_constraintHorizontal_bias="0.88" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
